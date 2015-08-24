@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "Simple demo to show off build scripts with npm",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha test -u bdd -R dot"
-  },
+
   "devDependencies": {
     "coffee-script": "^1.9.3",
     "mocha": "^2.2.5",
     "should": "^7.0.4",
     "typescript": "^1.5.3"
   },
+  
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test -u bdd -R dot",
+    "compile:coffee" : "coffee --compile --output ./lib ./src/coffeescripts",
+    "compile": "npm run compile:coffee"
+  },
+
   "repository": {
     "type": "git",
     "url": "."
