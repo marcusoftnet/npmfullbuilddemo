@@ -1,6 +1,6 @@
 {
   "name": "fullbuild",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Simple demo to show off build scripts with npm",
   "main": "index.js",
   "devDependencies": {
@@ -16,7 +16,8 @@
     "compile:coffee": "./node_modules/coffee-script/bin/coffee --compile --output ./lib ./src/coffeescripts",
     "compile:ts": "./node_modules/typescript/bin/tsc --outDir ./lib --module commonjs ./src/typescripts/tsCode.ts",
     "compile": "npm run compile:coffee && npm run compile:ts",
-    "clean": "rm -rf lib/*"
+    "clean": "rm -rf lib/*",
+    ""
   },
   "repository": {
     "type": "git",
