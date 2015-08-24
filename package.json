@@ -1,0 +1,24 @@
+{
+  "name": "fullbuild",
+  "version": "1.0.0",
+  "description": "Simple demo to show off build scripts with npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test -u bdd -R dot"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "mocha": "^2.2.5",
+    "typescript": "^1.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "npm",
+    "build"
+  ],
+  "author": "Marcus Hammarberg @marcusoftnet",
+  "license": "MIT"
+}
