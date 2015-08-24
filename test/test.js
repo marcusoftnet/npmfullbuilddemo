@@ -1,4 +1,3 @@
-/*global require, describe, it, global */
 var should = require("should");
 var app = require("../");
 
