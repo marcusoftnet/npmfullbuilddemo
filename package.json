@@ -10,7 +10,7 @@
     "typescript": "^1.5.3"
   },
     "scripts": {
-    "deployToProd"    : "npm run test && npm run version:patch && npm run push && npm run launch",  
+    "deploy:prod"     : "npm run test && npm run version:patch && npm run push && npm run launch",  
 
     "clean"           : "rm -rf lib/*",
 
