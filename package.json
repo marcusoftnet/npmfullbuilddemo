@@ -1,6 +1,6 @@
 {
   "name": "fullbuild",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Simple demo to show off build scripts with npm",
   "main": "index.js",
   "devDependencies": {
