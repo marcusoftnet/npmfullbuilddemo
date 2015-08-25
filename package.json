@@ -10,19 +10,25 @@
     "typescript": "^1.5.3"
   },
   "scripts": {
-    "deployToProd": "npm run test && npm run version:patch && npm run push && npm run deploy",
-    "clean": "rm -rf lib/*",
-    "compile": "npm run compile:coffee && npm run compile:ts",
-    "compile:coffee": "./node_modules/coffee-script/bin/coffee --compile --output ./lib ./src/coffeescripts",
-    "compile:ts": "./node_modules/typescript/bin/tsc --outDir ./lib --module commonjs ./src/typescripts/tsCode.ts",
-    "pretest": "npm run clean && npm run compile",
-    "test": "mocha test -u bdd -R dot",
-    "version:patch": "npm version patch",
-    "push": "npm run push:git && npm run push:heroku",
-    "push:git": "git push --tags origin HEAD:master",
-    "push:heroku": "git push heroku master",
-    "launch": "open https://npmfullbuilddemo.herokuapp.com/",
-    "start": "node --harmony app.js"
+    "deployToProd"    : "npm run test && npm run version:patch && npm run push && npm run launch",  
+
+    "clean"           : "rm -rf lib/*",
+
+    "compile"         : "npm run compile:coffee && npm run compile:ts",
+    "compile:coffee"  : "./node_modules/coffee-script/bin/coffee --compile --output ./lib ./src/coffeescripts",
+    "compile:ts"      : "./node_modules/typescript/bin/tsc --outDir ./lib --module commonjs ./src/typescripts/tsCode.ts",
+
+    "pretest"         : "npm run clean && npm run compile",
+    "test"            : "mocha test -u bdd -R dot",
+
+    "version:patch"   : "npm version patch",
+
+    "push"            : "npm run push:git && npm run push:heroku",
+    "push:git"        : "git push --tags origin HEAD:master",
+    "push:heroku"     : "git push heroku master",
+
+    "launch"          : "open https://npmfullbuilddemo.herokuapp.com/",
+    "start"           : "node index.js"
   },
   "repository": {
     "type": "git",
