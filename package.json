@@ -22,7 +22,7 @@
     "push:git": "git push --tags origin HEAD:master",
     "push:heroku": "git push heroku master",
     "launch": "open https://npmfullbuilddemo.herokuapp.com/",
-    "start": "node app.js"
+    "start": "node --harmony app.js"
   },
   "repository": {
     "type": "git",
