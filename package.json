@@ -5,7 +5,10 @@
   "main": "index.js",
   "devDependencies": {
     "coffee-script": "^1.9.3",
+    "jslint": "^0.9.3",
+    "live-reload": "^1.1.0",
     "mocha": "^2.2.5",
+    "nodemon": "^1.4.1",
     "should": "^7.0.4",
     "typescript": "^1.5.3"
   },
@@ -22,7 +25,12 @@
     "push:git": "git push --tags origin HEAD:master",
     "push:heroku": "git push heroku master",
     "launch": "open https://npmfullbuilddemo.herokuapp.com/",
-    "start": "node --harmony app.js"
+    "start": "node --harmony app.js",
+    "watch:server": "nodemon --harmony app.js",
+    "watch:client": "live-reload --port 9091 ./",
+    "watch": "npm run watch:server & npm run watch:client",
+    "lint:optionsfile" : "jslint index.js",
+    "lint:inlineoptions" : "jslint --evil --indent 2 --vars --passfail false --plusplus false index.js"
   },
   "repository": {
     "type": "git",
