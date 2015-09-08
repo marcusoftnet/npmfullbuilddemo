@@ -9,12 +9,13 @@
     "live-reload": "^1.1.0",
     "mocha": "^2.2.5",
     "nodemon": "^1.4.1",
+    "rimraf": "^2.4.3",
     "should": "^7.0.4",
     "typescript": "^1.5.3"
   },
   "scripts": {
     "deploy:prod": "npm run test && npm run version:patch && npm run push && npm run launch",
-    "clean": "rm -rf lib/*",
+    "clean": "rimraf lib/*",
     "compile": "npm run compile:coffee && npm run compile:ts",
     "compile:coffee": "coffee --compile --output ./lib ./src/coffeescripts",
     "compile:ts": "tsc --outDir ./lib --module commonjs ./src/typescripts/tsCode.ts",
@@ -29,8 +30,8 @@
     "watch:server": "nodemon --harmony app.js",
     "watch:client": "live-reload --port 9091 ./",
     "watch": "npm run watch:server & npm run watch:client",
-    "lint:optionsfile" : "jslint index.js",
-    "lint:inlineoptions" : "jslint --evil --indent 2 --vars --passfail false --plusplus false index.js"
+    "lint:optionsfile": "jslint index.js",
+    "lint:inlineoptions": "jslint --evil --indent 2 --vars --passfail false --plusplus false index.js"
   },
   "repository": {
     "type": "git",
